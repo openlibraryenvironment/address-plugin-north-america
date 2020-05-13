@@ -1,13 +1,14 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import { Row, Col } from '@folio/stripes/components';
-import { AddressTextField } from '@folio/address-utils';
+import { AddressTextField, toKebabCase } from '@folio/address-utils';
 
 import backendToFields from './backendToFields';
 
 class AddressFieldsUSA extends React.Component {
   render() {
-    const { name, requiredValidator, savedAddress, textFieldComponent } = this.props;
+    const { country, name, requiredValidator, savedAddress, textFieldComponent } = this.props;
+    const countryString = toKebabCase(country);
     const initialValues = backendToFields(savedAddress);
     return (
       <> 
@@ -15,7 +16,7 @@ class AddressFieldsUSA extends React.Component {
           <Col xs={6} >
             <AddressTextField
               name={name ? `${name}.addressLineOne` : "addressLineOne"}
-              label={<FormattedMessage id="ui-address-plugin-north-america.addressLineOne" />}
+              label={<FormattedMessage id={`ui-address-plugin-north-america.${countryString}.addressLineOne`} />}
               component={textFieldComponent}
               required={true}
               validator={requiredValidator}
@@ -25,7 +26,7 @@ class AddressFieldsUSA extends React.Component {
           <Col xs={6} >
             <AddressTextField
               name={name ? `${name}.addressLineTwo` : "addressLineTwo"}
-              label={<FormattedMessage id="ui-address-plugin-north-america.addressLineTwo" />}
+              label={<FormattedMessage id={`ui-address-plugin-north-america.${countryString}.addressLineTwo`} />}
               component={textFieldComponent}
               initialValue={initialValues.addressLineTwo}
             />
@@ -35,7 +36,7 @@ class AddressFieldsUSA extends React.Component {
           <Col xs={12}>
             <AddressTextField
               name={name ? `${name}.locality` : "locality"}
-              label={<FormattedMessage id="ui-address-plugin-north-america.locality" />}
+              label={<FormattedMessage id={`ui-address-plugin-north-america.${countryString}.locality`} />}
               component={textFieldComponent}
               required={true}
               validator={requiredValidator}
@@ -47,7 +48,7 @@ class AddressFieldsUSA extends React.Component {
           <Col xs={6} >
             <AddressTextField
               name={name ? `${name}.administrativeArea` : "administrativeArea"}
-              label={<FormattedMessage id="ui-address-plugin-north-america.administrativeArea" />}
+              label={<FormattedMessage id={`ui-address-plugin-north-america.${countryString}.administrativeArea`} />}
               component={textFieldComponent}
               required={true}
               validator={requiredValidator}
@@ -57,7 +58,7 @@ class AddressFieldsUSA extends React.Component {
           <Col xs={6}>
             <AddressTextField
               name={name ? `${name}.postalCode` : "postalCode"}
-              label={<FormattedMessage id="ui-address-plugin-north-america.postalCode" />}
+              label={<FormattedMessage id={`ui-address-plugin-north-america.${countryString}.postalCode`} />}
               component={textFieldComponent}
               required={true}
               validator={requiredValidator}

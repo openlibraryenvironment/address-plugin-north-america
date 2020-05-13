@@ -1,7 +1,13 @@
 {
-  "addressLineOne": "Address line 1",
-  "addressLineTwo": "Address line 2",
-  "locality": "City",
-  "administrativeArea": "State",
-  "postalCode": "Zip code"
+  "usa.addressLineOne": "Address line 1",
+  "usa.addressLineTwo": "Address line 2",
+  "usa.locality": "City",
+  "usa.administrativeArea": "State",
+  "usa.postalCode": "Zip code",
+  
+  "canada.addressLineOne": "Address line 1",
+  "canada.addressLineTwo": "Address line 2",
+  "canada.locality": "City",
+  "canada.administrativeArea": "Province",
+  "canada.postalCode": "Postal code"
 }

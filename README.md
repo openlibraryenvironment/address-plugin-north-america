@@ -1,3 +1,4 @@
+
 # address-plugin-north-america
 
 This is a plugin designed for use with `address-plugin-utils` as part of a general set of plugins. This plugin in particular refers to the US specific address form.
@@ -27,3 +28,6 @@ Thoroughfare: "123 Street"
 
 This means that `Address Line 1` is listed as required.
 `backendToFields` and `fieldsToBackend` should be able to do most of the lifting here.
+
+## Supported countries
+This plugin currently supports address forms for USA and Canada

@@ -1,0 +1,7 @@
+{
+  "addressLineOne": "Address line 1",
+  "addressLineTwo": "Address line 2",
+  "locality": "City",
+  "administrativeArea": "State",
+  "postalCode": "Zip code"
+}

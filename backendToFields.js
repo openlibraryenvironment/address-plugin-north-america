@@ -8,6 +8,8 @@ const backendToFields = (address) => {
   const locality = getExistingLineField(address.lines, 'locality')?.value
   const postalCode = getExistingLineField(address.lines, 'postalcode')?.value
   const administrativeArea = getExistingLineField(address.lines, 'administrativearea')?.value
+  const country = getExistingLineField(address.lines, 'country')?.value
+  const countryCode = address?.countryCode
 
   if (premise && thoroughfare) {
     addressFields.addressLineOne = premise;
@@ -24,6 +26,12 @@ const backendToFields = (address) => {
   }
   if (administrativeArea) {
     addressFields.administrativeArea = administrativeArea;
+  }
+  if (country) {
+    addressFields.country = country;
+  }
+  if (countryCode) {
+    addressFields.countryCode = countryCode;
   }
 
   return addressFields;

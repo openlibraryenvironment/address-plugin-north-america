@@ -1,5 +1,5 @@
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
+import { FormattedMessage, injectIntl } from 'react-intl';
 import { Row, Col } from '@folio/stripes/components';
 import { AddressTextField, toKebabCase } from '@folio/address-utils';
 
@@ -7,9 +7,10 @@ import backendToFields from './backendToFields';
 
 class AddressFieldsUSA extends React.Component {
   render() {
-    const { country, name, requiredValidator, savedAddress, textFieldComponent } = this.props;
+    const { country, intl, name, requiredValidator, savedAddress, textFieldComponent } = this.props;
     const countryString = toKebabCase(country);
     const initialValues = backendToFields(savedAddress);
+    console.log("InitialValues: %o", initialValues)
     return (
       <> 
         <Row>
@@ -66,8 +67,21 @@ class AddressFieldsUSA extends React.Component {
             />
           </Col>
         </Row>
+        <Row>
+          <Col xs={12} >
+          <AddressTextField
+            name={name ? `${name}.country` : "country"}
+            label={<FormattedMessage id={`ui-address-plugin-north-america.${countryString}.country`} />}
+            component={textFieldComponent}
+            required={true}
+            validator={requiredValidator}
+            initialValue={initialValues.country}
+            defaultValue={intl.formatMessage({ id: `ui-address-plugin-north-america.countryCode.${initialValues.countryCode}` })}
+            />
+          </Col>
+        </Row>
       </>
     );
   }
 }
-export default AddressFieldsUSA;
+export default injectIntl(AddressFieldsUSA);

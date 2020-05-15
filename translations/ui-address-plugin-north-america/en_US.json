@@ -1,13 +1,18 @@
 {
-  "usa.addressLineOne": "Address line 1",
-  "usa.addressLineTwo": "Address line 2",
-  "usa.locality": "City",
-  "usa.administrativeArea": "State",
-  "usa.postalCode": "Zip code",
+  "countryCode.US": "USA",
+  "countryCode.CA": "Canada",
+
+  "us.addressLineOne": "Address line 1",
+  "us.addressLineTwo": "Address line 2",
+  "us.locality": "City",
+  "us.administrativeArea": "State",
+  "us.postalCode": "Zip code",
+  "us.country": "Country",
   
-  "canada.addressLineOne": "Address line 1",
-  "canada.addressLineTwo": "Address line 2",
-  "canada.locality": "City",
-  "canada.administrativeArea": "Province",
-  "canada.postalCode": "Postal code"
+  "ca.addressLineOne": "Address line 1",
+  "ca.addressLineTwo": "Address line 2",
+  "ca.locality": "City",
+  "ca.administrativeArea": "Province",
+  "ca.postalCode": "Postal code",
+  "ca.country": "Country"
 }

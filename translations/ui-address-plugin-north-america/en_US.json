@@ -1,18 +1,18 @@
 {
-  "countryCode.US": "USA",
-  "countryCode.CA": "Canada",
+  "US.countryCode": "USA",
+  "CA.countryCode": "Canada",
 
-  "us.addressLineOne": "Address line 1",
-  "us.addressLineTwo": "Address line 2",
-  "us.locality": "City",
-  "us.administrativeArea": "State",
-  "us.postalCode": "Zip code",
-  "us.country": "Country",
+  "US.addressLineOne": "Address line 1",
+  "US.addressLineTwo": "Address line 2",
+  "US.locality": "City",
+  "US.administrativeArea": "State",
+  "US.postalCode": "Zip code",
+  "US.country": "Country",
   
-  "ca.addressLineOne": "Address line 1",
-  "ca.addressLineTwo": "Address line 2",
-  "ca.locality": "City",
-  "ca.administrativeArea": "Province",
-  "ca.postalCode": "Postal code",
-  "ca.country": "Country"
+  "CA.addressLineOne": "Address line 1",
+  "CA.addressLineTwo": "Address line 2",
+  "CA.locality": "City",
+  "CA.administrativeArea": "Province",
+  "CA.postalCode": "Postal code",
+  "CA.country": "Country"
 }

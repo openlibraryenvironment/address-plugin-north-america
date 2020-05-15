@@ -67,14 +67,14 @@ class AddressFieldsUSA extends React.Component {
         </Row>
         <Row>
           <Col xs={12} >
-          <AddressTextField
-            name={name ? `${name}.country` : "country"}
-            label={<FormattedMessage id={`ui-address-plugin-north-america.${country}.country`} />}
-            component={textFieldComponent}
-            required={true}
-            validator={requiredValidator}
-            initialValue={initialValues.country}
-            defaultValue={intl.formatMessage({ id: `ui-address-plugin-north-america.${initialValues.countryCode}.countryCode` })}
+            <AddressTextField
+              name={name ? `${name}.country` : "country"}
+              label={<FormattedMessage id={`ui-address-plugin-north-america.${country}.country`} />}
+              component={textFieldComponent}
+              required={true}
+              validator={requiredValidator}
+              initialValue={initialValues.country}
+              defaultValue={intl.formatMessage({ id: `ui-address-plugin-north-america.${initialValues.countryCode}.countryCode` })}
             />
           </Col>
         </Row>

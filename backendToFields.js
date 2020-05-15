@@ -3,13 +3,13 @@ import { getExistingLineField } from '@folio/address-utils';
 const backendToFields = (address) => {
   const addressFields = {};
 
-  const premise = getExistingLineField(address.lines, 'premise')?.value
-  const thoroughfare = getExistingLineField(address.lines, 'thoroughfare')?.value
-  const locality = getExistingLineField(address.lines, 'locality')?.value
-  const postalCode = getExistingLineField(address.lines, 'postalcode')?.value
-  const administrativeArea = getExistingLineField(address.lines, 'administrativearea')?.value
-  const country = getExistingLineField(address.lines, 'country')?.value
-  const countryCode = address?.countryCode
+  const premise = getExistingLineField(address.lines, 'premise')?.value;
+  const thoroughfare = getExistingLineField(address.lines, 'thoroughfare')?.value;
+  const locality = getExistingLineField(address.lines, 'locality')?.value;
+  const postalCode = getExistingLineField(address.lines, 'postalcode')?.value;
+  const administrativeArea = getExistingLineField(address.lines, 'administrativearea')?.value;
+  const country = getExistingLineField(address.lines, 'country')?.value;
+  const countryCode = address?.countryCode;
 
   if (premise && thoroughfare) {
     addressFields.addressLineOne = premise;
@@ -35,5 +35,6 @@ const backendToFields = (address) => {
   }
 
   return addressFields;
-}
+};
+
 export default backendToFields;

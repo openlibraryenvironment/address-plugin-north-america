@@ -1,2 +1,2 @@
-const listOfSupportedCountries = ["US", "CA"]
+const listOfSupportedCountries = ['US', 'CA'];
 export default listOfSupportedCountries;

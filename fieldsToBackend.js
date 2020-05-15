@@ -4,7 +4,7 @@ const fieldsToBackend = (address) => {
   const addressId = address.id || null;
   const countryCode = address.countryCode || null;
   const newAddress = {};
-  const lines = [];
+  let lines = [];
 
   if (address.addressLineOne && address.addressLineTwo) {
     // In this case we assume the first line is a premise, and the second is a thoroughfare
@@ -38,6 +38,7 @@ const fieldsToBackend = (address) => {
     lines.push({ type: { value: 'Country' }, value: address.country, id });
   }
 
+  lines = lines.filter(line => (line !== null));
   newAddress.addressLabel = address.addressLabel;
   newAddress.lines = lines;
   newAddress.id = addressId;

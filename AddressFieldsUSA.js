@@ -1,7 +1,7 @@
 import React from 'react';
 import { FormattedMessage, injectIntl } from 'react-intl';
 import { Row, Col } from '@folio/stripes/components';
-import { AddressTextField, toKebabCase } from '@folio/address-utils';
+import { AddressTextField } from '@folio/address-utils';
 
 import backendToFields from './backendToFields';
 
@@ -74,7 +74,7 @@ class AddressFieldsUSA extends React.Component {
             required={true}
             validator={requiredValidator}
             initialValue={initialValues.country}
-            defaultValue={intl.formatMessage({ id: `ui-address-plugin-north-america.countryCode.${initialValues.countryCode}` })}
+            defaultValue={intl.formatMessage({ id: `ui-address-plugin-north-america.${initialValues.countryCode}.countryCode` })}
             />
           </Col>
         </Row>

@@ -10,7 +10,6 @@ class AddressFieldsUSA extends React.Component {
     const { country, intl, name, requiredValidator, savedAddress, textFieldComponent } = this.props;
     const countryString = toKebabCase(country);
     const initialValues = backendToFields(savedAddress);
-    console.log("InitialValues: %o", initialValues)
     return (
       <> 
         <Row>
